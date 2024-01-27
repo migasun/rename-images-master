@@ -42,7 +42,7 @@ def get_creation_date(file_path):
 
 def rename_file(file_path,dest_path):
     # Set list of valid file extensions
-    valid_extensions = [".jpg", ".JPG", ".jpeg", ".JPEG", ".png", ".PNG",".HEIC",".heic",".MOV",".mov",".mp4",".gif",".GIF"]
+    valid_extensions = [".jpg", ".JPG", ".jpeg", ".JPEG", ".png", ".PNG",".HEIC",".heic",".MOV",".mov",".mp4",".MP4",".gif",".GIF"]
     
     # print("rename_file.file_path="+file_path)
 
