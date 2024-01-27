@@ -156,8 +156,8 @@ def rename_files_in_folder(folder_path,dest_path):
 if len(sys.argv) > 1:
     source_path = input_file_path = sys.argv[1]
     dest_path = input_file_path = sys.argv[2]
+    rename_files_in_folder(source_path,dest_path)
 else:
-    dest_path = source_path = older_path = os.getcwd()          
+    print("請輸入 python Rename.py source_path dest_path")  
 
 
-rename_files_in_folder(source_path,dest_path)
