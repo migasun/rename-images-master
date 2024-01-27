@@ -1,0 +1,12 @@
+# Exclude everything
+*
+
+# Include only 
+!*.py
+!*.md
+!LICENSE
+!.gitignore
+
+# Exclude the _data folder
+!_test_images
+
