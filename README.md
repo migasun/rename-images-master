@@ -4,10 +4,11 @@ Purpose: Renames image files in a folder based on date photo taken from EXIF met
 
 Author: Matthew Renze
 
-Usage: python.exe rename.py input-folder
-  - input-folder = the directory containing the image files to be renamed
+Usage: python.exe rename.py source_path_folder  dest_path_folder
+  - source_path_folder = the directory containing the image files to be renamed
+  - dest_path_folder = move images files to dest_path_folder\{year}\month
 
-Example: python.exe rename.py C:\Photos
+Example: python.exe rename.py C:\source_path\ C:\dest_path\  
 
 Behavior:
   - Given a photo named "Photo Apr 01, 5 54 17 PM.jpg"  

@@ -20,15 +20,6 @@
 #   - For safety, please make a backup of your photos before running this script
 #   - Currently only designed to work with .jpg, .jpeg, and .png files
 #   - If you omit the input folder, then the current working directory will be used instead.
-def get_creation_date(file_path):
-    # 获取文件的创建时间
-    creation_time = os.path.getctime(file_path)
-    
-    # 将时间戳转换为日期时间对象
-
-    creation_date = datetime.fromtimestamp(creation_time)  # 修正这一行
-    
-    return creation_date
 
 # Import libraries
 import os
@@ -37,6 +28,17 @@ import sys
 from datetime import datetime
 from PIL import Image
 import PIL
+
+def get_creation_date(file_path):
+    # 获取文件的创建时间
+    creation_time = os.path.getctime(file_path)
+    
+
+    creation_date = datetime.fromtimestamp(creation_time)  # 修正这一行
+    
+    return creation_date
+
+
 
 def rename_file(file_path,dest_path):
     # Set list of valid file extensions
@@ -148,15 +150,14 @@ def rename_files_in_folder(folder_path,dest_path):
             rename_files_in_folder(full_entry_path,dest_path)
         
             
-        
+# Main         
 # If folder path argument exists then use it
 # Else use the current running folder
 if len(sys.argv) > 1:
-    folder_path = input_file_path = sys.argv[1]
+    source_path = input_file_path = sys.argv[1]
     dest_path = input_file_path = sys.argv[2]
 else:
-    folder_path = os.getcwd()          
+    dest_path = source_path = older_path = os.getcwd()          
 
 
-
-rename_files_in_folder(folder_path,dest_path)
+rename_files_in_folder(source_path,dest_path)
